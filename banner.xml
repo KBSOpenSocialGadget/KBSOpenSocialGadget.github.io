@@ -3,7 +3,7 @@
   author="Emeritis Thailand" 
     author_email="dev@emeritis.com" 
     description="HTML Banner for SAP Jam"
-    thumbnail="banner.png" >
+    thumbnail="banner.jpg" >
     <Link rel="mediumIcon" href="Home-PNG-File.png"/>
     <Link rel="icon" href="Home-PNG-File.png"/>
     <Require feature="dynamic-height"/>
