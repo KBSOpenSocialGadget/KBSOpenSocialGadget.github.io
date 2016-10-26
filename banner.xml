@@ -1,5 +1,5 @@
 <Module specificationVersion='2'>
-  <ModulePrefs title="SAP Jam Banner"
+  <ModulePrefs title="SAP Jam Banner" height="360"
   author="Emeritis Thailand" 
     author_email="dev@emeritis.com" 
     description="HTML Banner for SAP Jam"
