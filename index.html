@@ -154,7 +154,10 @@
 	
 	function setBanner(aConfigure){
 		var oCarousel = $("#myCarousel")[0];
-		oCarousel.setAttribute("data-interval", aConfigure[0].Delay);
+		if(aConfigure[0].Delay !== "")	oCarousel.setAttribute("data-interval", aConfigure[0].Delay);
+		
+		if(aConfigure[0].Fade.toUpperCase() === "TRUE") oCarousel.classList.add("carousel-fade");
+		
 	}
 
 	// resize the canvas to fill browser window dynamically
@@ -172,7 +175,7 @@
 <body>
 
 <div class="container" style="width:100%!important;">
-  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
     <!-- Indicators -->
     <ol id="indicator" class="carousel-indicators">
       <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
