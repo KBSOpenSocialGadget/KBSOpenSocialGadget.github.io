@@ -50,17 +50,30 @@
   	function getConfigure(){
   		/* Get configuration file*/
   	  	var sPath = "file/config/BannerList.csv";
-  	  	var blob = null;
   		var xhr = new XMLHttpRequest();
   		xhr.onreadystatechange = function() {
   	   	if (this.readyState == 4 && this.status == 200) {
-  		    	/* console.log("Response data");
+  		    	/* console.log("Response data Banner");
 		  		console.log(this.responseText); */
-  	   	    	processData(this.responseText);
+  	   	    	var aLines = processData(this.responseText);
+  	   	   		buildBannerContent(aLines);
   	   	    }
   	  	};
   		xhr.open("GET", sPath, true);
   		xhr.send();
+  		
+  		var sPathConfig = "file/config/Config.csv";
+  		var xhr = new XMLHttpRequest();
+  		xhr.onreadystatechange = function() {
+  	   	if (this.readyState == 4 && this.status == 200) {
+  		    	console.log("Response data Config");
+  		    	setBanner(processData(this.responseText));
+  	   	    }
+  	  	};
+  		xhr.open("GET", sPathConfig, true);
+  		xhr.send();
+  		
+  		
   	}
   	
 	function processData(allText) {
@@ -83,7 +96,7 @@
 	    }
 	    /* console.log("Obj configure");
    	    console.log(lines); */
-   	 	buildBannerContent(lines);
+   	 	return lines;
    	}
 	
 	function buildBannerContent(aList){
@@ -131,22 +144,21 @@
   		  	oDiv.appendChild(oLink);
   		  	$("#slides")[0].appendChild(oDiv); 
 	  	}
-	  	
 	}
 
-	// resize the canvas to fill browser window dynamically
-	window.addEventListener('resize', resizeCanvas, false);
-	
 	function resizeCanvas() {
 		var oSlides = document.getElementById("slides");
         oSlides.style.width = window.innerWidth + "px";
         oSlides.style.height = window.innerHeight + "px";
 	}
 	
-	function buildIndicator(){
-		var oContent = document.getElementById("indicator");
-		debugger;
+	function setBanner(aConfigure){
+		var oCarousel = $("#myCarousel")[0];
+		oCarousel.setAttribute("data-interval", aConfigure[0].Delay);
 	}
+
+	// resize the canvas to fill browser window dynamically
+	window.addEventListener('resize', resizeCanvas, false);
 	
 	$( document ).ready(function() {
 		getConfigure();
@@ -160,7 +172,7 @@
 <body>
 
 <div class="container" style="width:100%!important;">
-  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
     <!-- Indicators -->
     <ol id="indicator" class="carousel-indicators">
       <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
