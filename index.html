@@ -82,13 +82,17 @@
 	    var lines = [];
 
 	    for (var i=1; i<allTextLines.length; i++) {
-	        var data = allTextLines[i].split(',');
+	        //var data = allTextLines[i].split(',');
+	        var data = allTextLines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 	        if (data.length == headers.length) {
-
+	        	
 	            var tarr = [];
 	            var oObject = {};
 	            for (var j=0; j<headers.length; j++) {
-	            	
+
+	            	data[j] = data[j].replace(/^\"/, '');
+	            	data[j] = data[j].replace(/\"$/, '');
+	            	data[j] = data[j].replace(/""/g, '"');
 	            	oObject[headers[j]] = data[j];
 	            }
 	            lines.push(oObject);
@@ -104,25 +108,10 @@
 	  	
 	  	//oImg.src= "file/image/cat1.jpg";
 	  
-	  	for(i=0; i < aList.length; i++){
-			var oDiv = document.createElement('div');
-		  	var oImg = document.createElement("div");
-		  	var oLink = document.createElement('a');
+	  	for(i=0; i < aList.length; i++){  
 	  		
-	  		/* File Name */
-	  		//oImg.src = sImgPath + aList[i].File_Name; 
-	  		/* oImg.style = "background-image:" + sImgPath + aList[i].File_Name + ";" + 
-	  					 "width: 100%; height: 100%;" ;  */
+	  		if(aList[i].File_Name == "") continue;
 	  		
-	  		/* Title */
-  			//oImg.title = aList[i].Title; 
-  			
-  			/* URL */
-  			oLink.href = aList[i].Url; 
-  			oLink.target = "_blank";
-			//aList[i].Url 
-			
-			
 			/* Indicator */
 			var oIndicator = document.createElement('li');
 			oIndicator.setAttribute("data-target", "#myCarousel");
@@ -130,19 +119,45 @@
 			oIndicator.setAttribute("data-slide-to", i);
 			$("#indicator")[0].appendChild(oIndicator); 
 			
-			/* Set class */
-			if(i === 0) oDiv.className = "item active";
-			else oDiv.className = "item";
+			/* Caption */
+			if(aList[i].Text !== ""){
+			  	var oCaption = document.createElement('div');
+			  	oCaption.classList.add("carousel-caption");
+			  	var oHead = document.createElement('h3');
+			  	var oText = document.createTextNode(aList[i].Text);
+			  	oHead.appendChild(oText)
+			  	oCaption.appendChild(oHead);
+		  	}
 			
-			/* Set Image*/
+			/* Set class */
+			var oItem = document.createElement('div');
+			if(i === 0) oItem.className = "item active";
+			else oItem.className = "item";
+			
+			/* Set Image*/	
+		  	var oImg = document.createElement("div");
 			oImg.style.backgroundImage = "url('" + sImgPath + aList[i].File_Name + "')";
 			oImg.style.width = "100%";
 			oImg.style.height = "100%";
 			oImg.style.backgroundSize = "cover";
 			
-			oLink.appendChild(oImg);
-  		  	oDiv.appendChild(oLink);
-  		  	$("#slides")[0].appendChild(oDiv); 
+
+		  	/* Link */
+		  	var oLink = document.createElement('a');
+		  	if(aList[i].Text !== ""){
+	  			oLink.href = aList[i].Url; 
+	  			oLink.target = "_blank";
+			  	oLink.appendChild(oCaption);
+		  	}
+		  	
+		  	var oLinkImg = document.createElement('a');
+		  	oLinkImg.href = aList[i].Url; 
+		  	oLinkImg.target = "_blank";
+		  	oLinkImg.appendChild(oImg);
+			
+  		  	oItem.appendChild(oLinkImg);
+  		  	oItem.appendChild(oLink);
+  		  	$("#slides")[0].appendChild(oItem); 
 	  	}
 	}
 
@@ -186,6 +201,7 @@
 
     <!-- Wrapper for slides -->
     <div id="slides" class="carousel-inner" role="listbox">
+    	
     </div>
 
     <!-- Left and right controls -->
