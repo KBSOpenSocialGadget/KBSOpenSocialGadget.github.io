@@ -49,11 +49,31 @@
 			    
 
 			    onGet = function(){
-			    	getAccessToken();
+			    	/* getAccessToken();
 			    	var clientId = $('#client_id').val();
 			    	var url = "https://jamsalesdemo8.sapjam.com/oauth/request_token?"
-			    	var consumet_key = "oauth_consumer_key='" + clientId + "'";
+			    	var consumet_key = "oauth_consumer_key='" + clientId + "'"; */
 			    	
+			    	var data = JSON.stringify({
+			    		  "oauth_callback": "oob"
+			    		});
+
+		    		var xhr = new XMLHttpRequest();
+		    		xhr.withCredentials = true;
+
+		    		xhr.addEventListener("readystatechange", function () {
+		    		  if (this.readyState === 4) {
+		    		    console.log(this.responseText);
+		    		  }
+		    		});
+
+		    		xhr.open("POST", "https://jamsalesdemo8.sapjam.com/oauth/request_token");
+		    		xhr.setRequestHeader("content-type", "application/json");
+		    		xhr.setRequestHeader("authorization", "OAuth oauth_consumer_key=\\\"H8lYhiYD1jPbNCJu9389\\\",oauth_signature_method=\\\"HMAC-SHA1\\\",oauth_timestamp=\\\"1477564387\\\",oauth_nonce=\\\"A7fQHb\\\",oauth_version=\\\"1.0\\\",oauth_signature=\\\"g2MWkqqXYe9Jpe%2BK2D8v7i29qf4%3D\\\"");
+		    		xhr.setRequestHeader("cache-control", "no-cache");
+		    		xhr.setRequestHeader("postman-token", "8a45095a-868d-0185-5199-94641b2355a7");
+
+		    		xhr.send(data);
 
 			    	//window.location = url;
 				};
