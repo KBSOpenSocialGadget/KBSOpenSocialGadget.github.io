@@ -1,0 +1,113 @@
+<mvc:View controllerName="zunit.converter.controller.MainView" 
+		  xmlns:html="http://www.w3.org/1999/xhtml" 
+		  xmlns:mvc="sap.ui.core.mvc" 
+		  xmlns:l="sap.ui.layout"
+		  xmlns="sap.m"
+		  xmlns:u="sap.ui.unified"
+	  	  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<App>
+		<pages>
+			<!-- <Page >
+				<content> -->
+						<l:Grid
+						class="sapUiSmallMarginTop"
+						vSpacing="0"
+						defaultSpan="L6 M6 S6">
+						<l:content>
+							<Input type="Number" liveChange="onKeyValue" app:key="byte" 
+							value="{path:'screen>/byte', 
+									type: 'sap.ui.model.type.Currency',
+									formatOptions: {
+										groupingSize: 100,
+										minIntegerDigits: 1,
+										maxIntegerDigits: 1000,
+										maxFractionDigits: 4,
+										minFractionDigits: 4,
+										parseAsString: true,
+										groupingEnabled: true,
+										showMeasure: true,
+										decimalSeparator: '.'
+									}}" >
+								<layoutData>
+									<l:GridData span="M8 S8"></l:GridData>
+								</layoutData>
+							</Input>
+							<Text text="{i18n>byte}" class="sapUiSmallMarginTopBottom" >
+								<layoutData>
+									<l:GridData span="M4 S4"></l:GridData>
+								</layoutData>
+							</Text>
+							<Input type="Number" liveChange="onKeyValue" app:key="kbyte"
+							value="{path:'screen>/kbyte', 
+									type: 'sap.ui.model.type.Currency',
+									formatOptions: {
+										groupingSize: 100,
+										minIntegerDigits: 1,
+										maxFractionDigits: 4,
+										minFractionDigits: 4,
+										parseAsString: true,
+										groupingEnabled: true,
+										showMeasure: true,
+										decimalSeparator: '.'
+									}}" >
+								<layoutData>
+									<l:GridData span="M8 S8"></l:GridData>
+								</layoutData>		
+							</Input>
+							<Text text="{i18n>kiloByte}" class="sapUiSmallMarginTopBottom" >
+								<layoutData>
+									<l:GridData span="M4 S4"></l:GridData>
+								</layoutData>
+							</Text>
+							<Input type="Number" liveChange="onKeyValue" app:key="mbyte"
+							value="{path:'screen>/mbyte', 
+									type: 'sap.ui.model.type.Currency',
+									formatOptions: {
+										groupingSize: 100,
+										minIntegerDigits: 1,
+										maxFractionDigits: 4,
+										minFractionDigits: 4,
+										parseAsString: true,
+										groupingEnabled: true,
+										showMeasure: true,
+										decimalSeparator: '.'
+									}}" >
+								<layoutData>
+									<l:GridData span="M8 S8"></l:GridData>
+								</layoutData>		
+							</Input>
+							<Text text="{i18n>megaByte}" class="sapUiSmallMarginTopBottom" >
+								<layoutData>
+									<l:GridData span="M4 S4"></l:GridData>
+								</layoutData>
+							</Text>
+							<Input type="Number" liveChange="onKeyValue" app:key="gbyte"
+							value="{path:'screen>/gbyte', 
+									type: 'sap.ui.model.type.Currency',
+									formatOptions: {
+										groupingSize: 100,
+										minIntegerDigits: 0,
+										maxFractionDigits: 4,
+										minFractionDigits: 4,
+										parseAsString: true,
+										groupingEnabled: true,
+										showMeasure: true,
+										decimalSeparator: '.'
+									}}" >
+								
+								<layoutData>
+									<l:GridData span="M8 S8"></l:GridData>
+								</layoutData>
+							</Input>
+							<Text text="{i18n>gigaByte}" class="sapUiSmallMarginTopBottom" >
+								<layoutData>
+									<l:GridData span="M4 S4"></l:GridData>
+								</layoutData>
+							</Text>							
+						</l:content>
+					</l:Grid>
+				<!-- </content>
+			</Page>  -->
+		</pages>
+	</App>
+</mvc:View>
