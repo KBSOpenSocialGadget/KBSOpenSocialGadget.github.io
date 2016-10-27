@@ -5,7 +5,7 @@
 		  xmlns="sap.m"
 		  xmlns:u="sap.ui.unified"
 	  	  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
-	<App>
+	<App class="backGroundColor">
 		<pages>
 			<!-- <Page >
 				<content> -->
@@ -32,7 +32,7 @@
 									<l:GridData span="M8 S8"></l:GridData>
 								</layoutData>
 							</Input>
-							<Text text="{i18n>byte}" class="sapUiSmallMarginTopBottom" >
+							<Text text="{i18n>byte}" class="sapUiSmallMarginTopBottom converterText" >
 								<layoutData>
 									<l:GridData span="M4 S4"></l:GridData>
 								</layoutData>
@@ -54,7 +54,7 @@
 									<l:GridData span="M8 S8"></l:GridData>
 								</layoutData>		
 							</Input>
-							<Text text="{i18n>kiloByte}" class="sapUiSmallMarginTopBottom" >
+							<Text text="{i18n>kiloByte}" class="sapUiSmallMarginTopBottom converterText" >
 								<layoutData>
 									<l:GridData span="M4 S4"></l:GridData>
 								</layoutData>
@@ -76,7 +76,7 @@
 									<l:GridData span="M8 S8"></l:GridData>
 								</layoutData>		
 							</Input>
-							<Text text="{i18n>megaByte}" class="sapUiSmallMarginTopBottom" >
+							<Text text="{i18n>megaByte}" class="sapUiSmallMarginTopBottom converterText" >
 								<layoutData>
 									<l:GridData span="M4 S4"></l:GridData>
 								</layoutData>
@@ -99,7 +99,7 @@
 									<l:GridData span="M8 S8"></l:GridData>
 								</layoutData>
 							</Input>
-							<Text text="{i18n>gigaByte}" class="sapUiSmallMarginTopBottom" >
+							<Text text="{i18n>gigaByte}" class="sapUiSmallMarginTopBottom converterText" >
 								<layoutData>
 									<l:GridData span="M4 S4"></l:GridData>
 								</layoutData>

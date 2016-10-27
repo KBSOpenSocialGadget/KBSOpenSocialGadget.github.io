@@ -1,1 +1,18 @@
 /* Enter your custom styles here */
+.backGroundColor {
+    /* background-image: linear-gradient(to bottom,#545353 0,#8b8c8e 50%,#dddfe0 100%)!important; */
+    background-image: url("../image/background.jpg");
+}
+
+.shellBar .sapMShellBrandingBar {
+    visibility: hidden; 
+}
+
+.converterText {
+	font-weight: bold;
+	font-family: 'Rubik';
+}
+
+.overFlow {
+	overflow: hidden;
+}

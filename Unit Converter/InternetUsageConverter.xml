@@ -1,0 +1,13 @@
+<Module specificationVersion='2'>
+  <ModulePrefs title="Internet Usage Converter" width="300" height="300" 
+  author="Emeritis Thailand" 
+    author_email="dev@emeritis.com" 
+    description="Internet Usage Converterr for SAP Jam" >
+    <Require feature="dynamic-height"/>
+    <Require feature="osapi"/>
+    <Locale lang="all">
+      <msg name="title">Internet Usage Converter</msg>
+    </Locale>
+  </ModulePrefs>
+  <Content type="url" href="index.html"/>
+</Module>

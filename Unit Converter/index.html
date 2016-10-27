@@ -14,30 +14,26 @@
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-resourceroots='{"zunit.converter": ""}'>
 		</script>
-
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rubik">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		
 		<script>
 			sap.ui.getCore().attachInit(function() {
-				new sap.m.Shell({
+				var oShell = new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer({
 						height : "100%",
 						name : "zunit.converter"
 					})
-				}).placeAt("content");
+				});
+				oShell.addStyleClass("shellBar");
+				oShell.placeAt("content");
 			});
 			
 		</script>
-		
-		<style>
-			.sapUiGlobalBackgroundColor {
-			    background-image: linear-gradient(to bottom,#545353 0,#8b8c8e 50%,#dddfe0 100%)!important;
-			}
-		</style>
 	</head>
 
-	<body class="sapUiBody" id="content">
+	<body class="sapUiBody overFlow" id="content">
 	</body>
 
 </html>
