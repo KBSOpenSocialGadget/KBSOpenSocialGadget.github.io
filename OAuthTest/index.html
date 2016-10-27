@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/oauth.js"></script>
+		<script>
+			
+
+			(function(){
+
+			    function fetchAuthToken(clientId, clientSecretId) {
+			        var auth = oauth.authenticate(clientId, clientSecretId);
+
+			        auth.done(function (data) {
+			            console.warn(data);
+
+			            /* YOUR WORK STARTS HERE */
+			            data = JSON.parse(data);
+			            var token = data.access_token;
+
+			            console.warn("Token: "+token);
+			        });
+
+			        auth.fail(function () {
+			            console.error("Error in client Id or client secret Id");
+			        });
+			    }
+
+			    /**
+			     * click event for the explore button
+			     * @return {undefined}
+			     */
+			    getAccessToken = function () {
+			        var clientId = $('#client_id').val();
+			        var clientSecretId = $('#client_secret_id').val();
+			        
+			        if (!clientId || !clientSecretId) {
+			            console.error("Missing client id or client secret id");
+			        }
+			        else {
+			            /* get the authorization token[append to #auth_token] */
+			            fetchAuthToken(clientId, clientSecretId);
+			        }
+
+			    };
+			    
+
+			    onGet = function(){
+			    	getAccessToken();
+				};
+			}());
+			
+
+			
+		</script>
+
+	</head>
+	<body>
+		Client ID: <input id="client_id" type="text" name="clientId" value="H8lYhiYD1jPbNCJu9389"><br>
+		Client Secret: <input id="client_secret_id" type="text" name="lastName" value="eiA0gpybkJocdLuRPN8y5NszIHLipD8pfKV1Ufv8"><br>
+		<button type="button" onClick="onGet()">Click Me!</button>
+	</body>
+</html>
