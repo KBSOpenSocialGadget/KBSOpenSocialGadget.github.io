@@ -29,30 +29,6 @@ sap.ui.define([
 			
 			/* Refresh Model */
 			oModel.refresh();
-		},
-		
-		decreaseByte: function(dNum){
-			
-		},
-		
-		handleUploadPress: function (oEvent) {
-		    var url = "";
-		    var oFileUploader = this.getView().byId("fileUploader1");
-		    oFileUploader.addHeaderParameter(new sap.ui.unified.FileUploaderParameter({
-		        name: "slug",
-		        value: oFileUploader.getValue()
-		    }));
-
-		    oFileUploader.addHeaderParameter(new sap.ui.unified.FileUploaderParameter({
-		        name: "x-csrf-token",
-		        value: oController.oModel.getSecurityToken()
-		    }));
-
-		    oFileUploader.addHeaderParameter(new sap.ui.unified.FileUploaderParameter({
-		        name: "sendXHR",
-		        value: true
-		    }));
-		    oFileUploader.setUploadUrl(url);
 		}
 		
 	});

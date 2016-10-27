@@ -16,7 +16,8 @@
 		</script>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-
+		
+		
 		<script>
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
@@ -26,7 +27,14 @@
 					})
 				}).placeAt("content");
 			});
+			
 		</script>
+		
+		<style>
+			.sapUiGlobalBackgroundColor {
+			    background-image: linear-gradient(to bottom,#545353 0,#8b8c8e 50%,#dddfe0 100%)!important;
+			}
+		</style>
 	</head>
 
 	<body class="sapUiBody" id="content">
