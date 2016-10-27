@@ -60,13 +60,14 @@
 	    			  "url": "https://jamsalesdemo8.sapjam.com/oauth/request_token",
 	    			  "method": "POST",
 	    			  "headers": {
-	    			    "content-type": "application/json",
-	    			    "authorization": "OAuth oauth_consumer_key=\\\"H8lYhiYD1jPbNCJu9389\\\",oauth_signature_method=\\\"HMAC-SHA1\\\",oauth_timestamp=\\\"1477564387\\\",oauth_nonce=\\\"A7fQHb\\\",oauth_version=\\\"1.0\\\",oauth_signature=\\\"g2MWkqqXYe9Jpe%2BK2D8v7i29qf4%3D\\\"",
+	    			    "content-type": "application/x-www-form-urlencoded",
+	    			    "authorization": "OAuth oauth_consumer_key=\\\"H8lYhiYD1jPbNCJu9389\\\",oauth_signature_method=\\\"HMAC-SHA1\\\",oauth_timestamp=\\\"1477565138\\\",oauth_nonce=\\\"HPNxsV\\\",oauth_version=\\\"1.0\\\",oauth_signature=\\\"eiBuW5GW9Fq9gSQpE0dFW2YbYcc%3D\\\"",
 	    			    "cache-control": "no-cache",
-	    			    "postman-token": "dc05ce1a-eaca-d916-37d4-c96ec55ca128"
+	    			    "postman-token": "62a8c05d-86ac-06b1-43c5-f8e4b12aa2d8"
 	    			  },
-	    			  "processData": false,
-	    			  "data": "{\r\n\"oauth_callback\":\"oob\"\r\n}"
+	    			  "data": {
+	    			    "oauth_callback": "oob"
+	    			  }
 	    			}
 
 	    			$.ajax(settings).done(function (response) {
