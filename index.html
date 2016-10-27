@@ -82,7 +82,6 @@
 	    var lines = [];
 
 	    for (var i=1; i<allTextLines.length; i++) {
-	        //var data = allTextLines[i].split(',');
 	        var data = allTextLines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 	        if (data.length == headers.length) {
 	        	
@@ -193,10 +192,6 @@
   <div id="myCarousel" class="carousel slide" data-ride="carousel" >
     <!-- Indicators -->
     <ol id="indicator" class="carousel-indicators">
-      <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li> -->
     </ol>
 
     <!-- Wrapper for slides -->
