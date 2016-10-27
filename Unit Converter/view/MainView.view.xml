@@ -9,8 +9,9 @@
 		<pages>
 			<!-- <Page >
 				<content> -->
+						
 						<l:Grid
-						class="sapUiSmallMarginTop"
+						class="sapUiMediumMarginTop"
 						vSpacing="0"
 						defaultSpan="L6 M6 S6">
 						<l:content>
