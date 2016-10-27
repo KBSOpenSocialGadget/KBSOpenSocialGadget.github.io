@@ -7,7 +7,6 @@
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/oauth.js"></script>
 		<script src="js/cors.js"></script>
-		<script>$.enableCORS();</script>
 		<script>
 			
 
@@ -56,7 +55,8 @@
 			    	var url = "https://jamsalesdemo8.sapjam.com/oauth/request_token?"
 			    	var consumet_key = "oauth_consumer_key='" + clientId + "'"; */
 			    	
-			    	
+
+					$.enableCORS();
 			    	var settings = {
 	    			  "async": true,
 	    			  "crossDomain": true,
@@ -72,8 +72,7 @@
 	    			    "oauth_callback": "oob"
 	    			  }
 	    			}
-			    	
-			    	$.support.cors = true;
+
 
 	    			$.ajax(settings).done(function (response) {
 	    			  console.log(response);
