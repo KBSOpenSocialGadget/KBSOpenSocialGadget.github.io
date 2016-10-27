@@ -42,6 +42,7 @@ var oauth = {
             headers: {
                 'Accept': 'application/json, application/x-www-form-urlencoded',
                 'Content-Type': 'application/x-www-form-urlencoded',
+                'Access-Control-Allow-Origin': '*'
             },
             complete: function (xhr, data) {
                 console.warn(data);

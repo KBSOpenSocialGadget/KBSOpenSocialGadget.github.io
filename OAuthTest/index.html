@@ -50,6 +50,12 @@
 
 			    onGet = function(){
 			    	getAccessToken();
+			    	var clientId = $('#client_id').val();
+			    	var url = "https://jamsalesdemo8.sapjam.com/oauth/request_token?"
+			    	var consumet_key = "oauth_consumer_key='" + clientId + "'";
+			    	
+
+			    	//window.location = url;
 				};
 			}());
 			
