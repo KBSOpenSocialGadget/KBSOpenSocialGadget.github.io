@@ -1,5 +1,5 @@
-File_Name,Text,Url
-banner01.jpg,"Oman App, Do thing your way",https://www.google.co.th/
-banner02.jpg,Best Postpaid,https://www.facebook.com/
-banner03.jpg,Link up with Ooredoo,https://en.wikipedia.org/wiki/Main_Page
-banner04.jpg,,https://account.hanatrial.ondemand.com/
+File_Name,Text,Url,Group_ID
+banner01.jpg,"Oman App, Do thing your way",https://www.google.co.th/,TestGroup
+banner02.jpg,Best Postpaid,https://www.facebook.com/,TestGroup
+banner03.jpg,Link up with Ooredoo,https://en.wikipedia.org/wiki/Main_Page,TestGroup
+banner04.jpg,,https://account.hanatrial.ondemand.com/,TestGroup

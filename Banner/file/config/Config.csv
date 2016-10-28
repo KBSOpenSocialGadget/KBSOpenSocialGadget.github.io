@@ -1,2 +1,2 @@
-Delay,Fade
-5000,FALSE
+Delay,Fade,Group_ID
+5000,FALSE,TestGroup
