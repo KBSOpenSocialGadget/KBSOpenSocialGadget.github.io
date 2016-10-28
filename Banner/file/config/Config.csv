@@ -1,2 +1,3 @@
-Delay,Fade
-5000,FALSE
+Delay,Fade,Group_ID
+5000,FALSE,
+1000,FALSE,group01
