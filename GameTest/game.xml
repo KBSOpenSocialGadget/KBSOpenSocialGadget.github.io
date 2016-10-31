@@ -1,8 +1,8 @@
 <Module specificationVersion='2'>
-  <ModulePrefs title="SAP Jam Banner" height="360" 
+  <ModulePrefs title="Game" height="360" 
   author="Emeritis Thailand" 
     author_email="dev@emeritis.com" 
-    description="HTML Banner for SAP Jam"
+    description="Game for SAP Jam"
     thumbnail="banner.jpg" >
     <Link rel="mediumIcon" href="Home-PNG-File.png"/>
     <Link rel="icon" href="Home-PNG-File.png"/>
