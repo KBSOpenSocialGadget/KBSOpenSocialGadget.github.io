@@ -5,7 +5,7 @@
 		  xmlns="sap.m"
 		  xmlns:u="sap.ui.unified"
 	  	  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
-	<App class="backGroundColor">
+	<App class="backGroundColor"> 
 		<pages>
 			<!-- <Page >
 				<content> -->
