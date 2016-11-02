@@ -1,5 +1,5 @@
 <Module specificationVersion='2'>
-  <ModulePrefs title="Internet Usage Converter" width="300" height="300" 
+  <ModulePrefs title="Internet Usage Converter" width="300" height="350" 
   author="Emeritis Thailand" 
     author_email="dev@emeritis.com" 
     description="Internet Usage Converterr for SAP Jam" >
@@ -10,4 +10,4 @@
     </Locale>
   </ModulePrefs>
   <Content type="url" href="index.html"/>
-</Module> 
+</Module>

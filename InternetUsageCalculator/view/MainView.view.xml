@@ -5,10 +5,10 @@
 		  xmlns="sap.m"
 		  xmlns:u="sap.ui.unified"
 	  	  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
-	<App class="backGroundColor"> 
+	<App class="backGroundColor">
 		<pages>
-			<!-- <Page >
-				<content> -->
+			<Page title="{i18n>title}" class="pageHeader">
+				<content>
 						
 						<l:Grid
 						class="sapUiSmallMarginTop"
@@ -107,8 +107,8 @@
 							</Text>							
 						</l:content>
 					</l:Grid>
-				<!-- </content>
-			</Page>  -->
+				</content>
+			</Page> 
 		</pages>
 	</App>
 </mvc:View>

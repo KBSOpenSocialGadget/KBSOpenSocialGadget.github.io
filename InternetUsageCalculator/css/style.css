@@ -16,3 +16,17 @@
 .overFlow {
 	overflow: hidden;
 }
+
+.pageHeader .sapMPageHeader::before{
+    visibility: hidden;
+}
+
+
+.pageHeader .sapMBarPH{
+    background-color: #e30514;
+}
+
+.pageHeader .sapMTitle{
+    font-family: 'Rubik';
+    color: #ffffff;
+}
