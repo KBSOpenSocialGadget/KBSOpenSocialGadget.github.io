@@ -29,7 +29,7 @@
 	  transition-property: opacity;
 	}
 	.carousel-fade .carousel-inner .active {
-	  opacity: 1; 
+	  opacity: 1;
 	}
 	.carousel-fade .carousel-inner .active.left,
 	.carousel-fade .carousel-inner .active.right {
@@ -93,7 +93,7 @@
 		    	oObject = {};
 	        
 	        /* Build Default Object */
-	        if(data[seq].trim() === ""){
+	        if(data[seq] && data[seq].trim() === ""){
 		        oDefObject = buildObject(headers, data);
 	        	defLines.push(oDefObject);
 	        }	        
@@ -122,7 +122,7 @@
             	data[j] = data[j].replace(/^\"/, '');
             	data[j] = data[j].replace(/\"$/, '');
             	data[j] = data[j].replace(/""/g, '"');
-            	oObject[headers[j]] = data[j].trim();
+            	oObject[headers[j]] = (data[j]) ? data[j].trim() : "";
             }
         }
 		return oObject;
