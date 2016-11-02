@@ -93,7 +93,7 @@
 		    	oObject = {};
 	        
 	        /* Build Default Object */
-	        if(data[seq] === ""){
+	        if(data[seq].trim() === ""){
 		        oDefObject = buildObject(headers, data);
 	        	defLines.push(oDefObject);
 	        }	        
@@ -122,7 +122,7 @@
             	data[j] = data[j].replace(/^\"/, '');
             	data[j] = data[j].replace(/\"$/, '');
             	data[j] = data[j].replace(/""/g, '"');
-            	oObject[headers[j]] = data[j];
+            	oObject[headers[j]] = data[j].trim();
             }
         }
 		return oObject;
