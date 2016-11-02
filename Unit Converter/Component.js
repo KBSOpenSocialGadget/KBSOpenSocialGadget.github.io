@@ -27,4 +27,4 @@ sap.ui.define([
 			this.setModel(models.createScreenModel(),"screen");
 		}
 	});
-});
+}); 
