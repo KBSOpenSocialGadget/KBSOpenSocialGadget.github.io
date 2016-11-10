@@ -3,3 +3,4 @@ Delay,Fade,Group_ID
 1000,FALSE,group01
 100,TRUE,iOSPlayerGroup
 1000,FALSE,OM
+3000,TRUE,testbanner
